@@ -44,14 +44,6 @@
     </DesignTime>
   </Containee>
   <Containee
-    Name="link"
-    PackageName="com.dmcsol.xdm.model.view.link"
-    ObjectType="JboPackage">
-    <DesignTime>
-      <Attr Name="_VL" Value="true"/>
-    </DesignTime>
-  </Containee>
-  <Containee
     Name="lov"
     PackageName="com.dmcsol.xdm.model.view.lov"
     ObjectType="JboPackage">
@@ -67,4 +59,12 @@
       <Attr Name="_VO" Value="true"/>
     </DesignTime>
   </Containee>
+  <AppContainee
+    Name="CommonCode"
+    FullName="com.dmcsol.xdm.common.CommonCode"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="adflibXdmCommonCode.jar"/>
+    </DesignTime>
+  </AppContainee>
 </JboProject>
