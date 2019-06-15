@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TestXdmCommonModel"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ComponentClass="com.dmcsol.xdm.common.framework.ApplicationModuleImpl"
+  ClearCacheOnRollback="true">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.dmcsol.xdm.model.am.TestXdmCommonModel_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewUsage
+    Name="ElementsView"
+    ViewObjectName="com.dmcsol.xdm.model.view.ElementsView"/>
+  <ViewUsage
+    Name="EventsView"
+    ViewObjectName="com.dmcsol.xdm.model.view.EventsView"/>
+  <ViewUsage
+    Name="PersonsView"
+    ViewObjectName="com.dmcsol.xdm.model.view.PersonsView"/>
+  <ViewUsage
+    Name="ProgrammesView"
+    ViewObjectName="com.dmcsol.xdm.model.view.ProgrammesView"/>
+  <ViewUsage
+    Name="TasksView"
+    ViewObjectName="com.dmcsol.xdm.model.view.TasksView"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.dmcsol.xdm.model.CommonModelBundle"/>
+  </ResourceBundle>
+</AppModule>
