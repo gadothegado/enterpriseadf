@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="windows-1252" ?>
-<!---->
+<?xml version = '1.0' encoding = 'UTF-8'?>
 <BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
-  <AppModuleConfigBag ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel">
-    <AppModuleConfig name="TestXdmCommonModelLocal" jbo.project="com.dmcsol.xdm.model.CommonModel0"
-                     ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel" DeployPlatform="LOCAL">
-      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS"/>
-      <Security AppModuleJndiName="com.dmcsol.xdm.model.am.TestXdmCommonModel"/>
-    </AppModuleConfig>
-    <AppModuleConfig name="TestXdmCommonModelShared" jbo.project="com.dmcsol.xdm.model.CommonModel0"
-                     ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel" DeployPlatform="LOCAL">
-      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
-      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS"/>
-      <Security AppModuleJndiName="com.dmcsol.xdm.model.am.TestXdmCommonModel"/>
-    </AppModuleConfig>
-  </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel">
+      <AppModuleConfig name="TestXdmCommonModelLocal" jbo.project="com.dmcsol.xdm.model.CommonModel0" ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS"/>
+         <Security AppModuleJndiName="com.dmcsol.xdm.model.am.TestXdmCommonModel"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="TestXdmCommonModelShared" jbo.project="com.dmcsol.xdm.model.CommonModel0" ApplicationName="com.dmcsol.xdm.model.am.TestXdmCommonModel" DeployPlatform="LOCAL">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS"/>
+         <Security AppModuleJndiName="com.dmcsol.xdm.model.am.TestXdmCommonModel"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.dmcsol.xdm.model.am.XdmLovService">
+      <AppModuleConfig name="XdmLovServiceLocal" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="com.dmcsol.xdm.model.am.XdmLovService" jbo.project="com.dmcsol.xdm.model.CommonModel0">
+         <Database jbo.locking.mode="optimistic" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="com.dmcsol.xdm.model.am.XdmLovService"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="XdmLovServiceShared" DeployPlatform="LOCAL" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" ApplicationName="com.dmcsol.xdm.model.am.XdmLovService" jbo.project="com.dmcsol.xdm.model.CommonModel0">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Database jbo.locking.mode="optimistic" JDBCDataSource="java:comp/env/jdbc/MyXdmConnDS" jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="com.dmcsol.xdm.model.am.XdmLovService"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
 </BC4JConfig>
