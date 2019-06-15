@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EventsView"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="com.dmcsol.xdm.common.framework.ViewRowImpl"
+  ComponentClass="com.dmcsol.xdm.common.framework.ViewObjectImpl"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Events"
+    Entity="com.dmcsol.xdm.model.entity.Events"/>
+  <ViewAttribute
+    Name="EvKey"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="EvKey"
+    EntityUsage="Events"
+    AliasName="EV_KEY"/>
+  <ViewLinkAccessor
+    Name="ProgrammesView"
+    ViewLink="com.dmcsol.xdm.model.view.link.ProgEkFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Events"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="EVENTS"
+  AliasName="Events"
+  BindingStyle="OracleName"
+  RowClass="com.dmcsol.xdm.common.framework.EntityImpl">
+  <Attribute
+    Name="EvKey"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="EV_KEY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EVENTS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Programmes"
+    Association="com.dmcsol.xdm.model.entity.assoc.ProgEkFkAssoc"
+    AssociationEnd="com.dmcsol.xdm.model.entity.assoc.ProgEkFkAssoc.Programmes"
+    AssociationOtherEnd="com.dmcsol.xdm.model.entity.assoc.ProgEkFkAssoc.Events"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="EventsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="EVENTS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.dmcsol.xdm.model.entity.Events.EvKey"/>
+    </AttrArray>
+  </Key>
+</Entity>
