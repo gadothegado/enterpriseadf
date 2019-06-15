@@ -12,7 +12,7 @@
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../../../CommonModel.jpr"/>
     <Attr Name="_NamedConnection" Value="MyXdmConn"/>
-    <Attr Name="_appModuleNames0" Value="com.dmcsol.xdm.model.am.AppModule"/>
+    <Attr Name="_appModuleNames0" Value="com.dmcsol.xdm.model.am.TestXdmCommonModel"/>
   </DesignTime>
   <Containee
     Name="am"
@@ -22,6 +22,10 @@
       <Attr Name="_AM" Value="true"/>
     </DesignTime>
   </Containee>
+  <Containee
+    Name="common"
+    PackageName="com.dmcsol.xdm.model.am.common"
+    ObjectType="JboPackage"/>
   <Containee
     Name="assoc"
     PackageName="com.dmcsol.xdm.model.entity.assoc"
