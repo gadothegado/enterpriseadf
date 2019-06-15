@@ -13,12 +13,10 @@
   RowClass="com.dmcsol.xdm.common.framework.EntityImpl">
   <Attribute
     Name="ElemKey"
-    IsNotNull="true"
-    Precision="10"
     ColumnName="ELEM_KEY"
     SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
     TableName="ELEMENTS"
     PrimaryKey="true">
     <DesignTime>

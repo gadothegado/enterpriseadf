@@ -13,13 +13,16 @@
   RowClass="com.dmcsol.xdm.common.framework.EntityImpl">
   <Attribute
     Name="TaskId"
-    IsNotNull="true"
     ColumnName="TASK_ID"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.DBSequence"
     ColumnType="NUMBER"
     TableName="TASKS"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    RetrievedOnInsert="true"/>
   <Attribute
     Name="ElemKey"
     Precision="10"
