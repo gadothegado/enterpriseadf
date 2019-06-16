@@ -43,9 +43,5 @@
     EntityAttrName="Owner"
     EntityUsage="Programmes"
     AliasName="OWNER"/>
-  <ViewLinkAccessor
-    Name="TasksView"
-    ViewLink="com.dmcsol.xdm.model.view.link.ProgTaskFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+  
 </ViewObject>

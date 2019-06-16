@@ -50,14 +50,6 @@
     EntityAttrName="PermanentEmployeeYn"
     EntityUsage="Persons"
     AliasName="PERMANENT_EMPLOYEE_YN"/>
-  <ViewLinkAccessor
-    Name="ProgrammesView"
-    ViewLink="com.dmcsol.xdm.model.view.link.ProgPersFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="TasksView"
-    ViewLink="com.dmcsol.xdm.model.view.link.PersTaskFkLink"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+
+  
 </ViewObject>
